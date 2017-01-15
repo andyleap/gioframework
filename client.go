@@ -21,7 +21,6 @@ type Client struct {
 func Connect(server string, userid string, username string) (*Client, error) {
 
 	dialer := &websocket.Dialer{}
-	dialer.EnableCompression = true
 	url := "ws://ws.generals.io/socket.io/?EIO=3&transport=websocket"
 
 	if server == "eu" {
